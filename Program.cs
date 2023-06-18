@@ -2,10 +2,9 @@
 
 static List<int> compareTriplets(List<int> a, List<int> b){
     int tempA = 0, tempB = 0;
-    foreach (var item in a.Select((v,i) => (v,i)))
-    {
-        if (item.v > b[item.i]) { tempA++; }
-        else if (item.v < b[item.i]) { tempB++; }
+    for (int i = 0; i < a.Count; i++){
+        if (a[i] > b[i]) { tempA++; }
+        else if (a[i] < b[i]) { tempB++; } 
     }
     return new List<int> { tempA, tempB };   
 }
